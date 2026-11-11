@@ -1,0 +1,1 @@
+Terra Nova Development website v024 — 30 articles. Added #029 Medicare For All Americans and #030 Beyond the Ballot. Upload extracted folder contents to static hosting repository; live deployment not performed.
