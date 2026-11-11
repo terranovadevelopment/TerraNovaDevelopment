@@ -6,14 +6,6 @@ on:
         description: "Article number to verify (e.g. 57)"
         required: true
         type: number
-  push:
-    paths:
-      - 'articles/**'
-      - 'assets/**'
-      - 'downloads/**'
-      - 'index.html'
-      - 'scripts/validate_publication.py'
-      - '.github/workflows/validate-publication.yml'
 jobs:
   validate:
     runs-on: ubuntu-latest
