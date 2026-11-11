@@ -1,7 +1,3 @@
-TERRA NOVA DEVELOPMENT — ARTICLE #057
+Terra Nova Development Articles 061–063
 
-Extract this ZIP into the root of your local TerraNovaDevelopment repository, preserving folders. Commit and push all three files.
-
-After the files are on GitHub, tell ChatGPT: "Article 57 files pushed." ChatGPT will update the homepage card and revision history directly in GitHub and verify the image and DOCX.
-
-This ZIP does not overwrite index.html or any existing article.
+Extract this ZIP into your local TerraNovaDevelopment repository root, preserving folders. Commit and push all files. Then tell ChatGPT: Articles 61–63 pushed. ChatGPT will add the homepage cards and revision history after verifying all files in GitHub. Do not replace index.html.
