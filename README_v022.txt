@@ -1,0 +1,1 @@
+Terra Nova Development website Version 022. Added Article #025 on distributed rooftop and parking-lot solar, with supplied image and downloadable DOCX. Upload the contents of this archive to the static website repository.

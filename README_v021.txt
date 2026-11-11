@@ -1,0 +1,1 @@
+Version 021: Added Article #024, The National Staples Act: The Modern Cornucopia. Upload the contents of this folder to the Terra Nova Development static website repository. This package does not deploy itself.
