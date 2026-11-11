@@ -1,0 +1,1 @@
+Terra Nova Development Website v025 — 33 articles. Added #031 child care, #032 World Beyond Money, #033 Medicare for All and SSDI. Extract ZIP and upload contents to static hosting. Live deployment not performed.
