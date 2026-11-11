@@ -1,5 +1,7 @@
-Terra Nova Development static website
-Open index.html in any browser.
-To publish, upload all files and folders, keeping the same structure, to GitHub Pages or a Render Static Site.
-The article thumbnail links to articles/article-001.html.
-Replace the placeholder Buy Me a Coffee section with a verified URL when ready.
+Terra Nova Development — Website Version 003
+
+Contains articles #001, #002 and #003, banner, original images, and Buy Me a Coffee link.
+
+DEPLOY: Extract ZIP. Copy CONTENTS (index.html, articles/, assets/, README.txt) into the root of your existing local GitHub repository, replacing matching files. Commit in GitHub Desktop and Push origin. Render should auto-deploy if enabled.
+
+Versioning: Next website release should be v004; article numbering remains independent (#004 for next article).
