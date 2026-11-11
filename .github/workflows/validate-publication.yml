@@ -1,0 +1,35 @@
+name: Validate Terra Nova publication
+on:
+  workflow_dispatch:
+    inputs:
+      article_number:
+        description: "Article number to verify (e.g. 57)"
+        required: true
+        type: number
+  push:
+    paths:
+      - 'articles/**'
+      - 'assets/**'
+      - 'downloads/**'
+      - 'index.html'
+      - 'scripts/validate_publication.py'
+      - '.github/workflows/validate-publication.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Determine article
+        id: article
+        shell: bash
+        env:
+          REQUESTED: ${{ inputs.article_number }}
+        run: |
+          if [ -n "$REQUESTED" ]; then
+            echo "number=$REQUESTED" >> "$GITHUB_OUTPUT"
+          else
+            latest=$(find articles -maxdepth 1 -name 'article-[0-9][0-9][0-9].html' | sed -E 's/.*article-([0-9]+)\.html/\1/' | sort -n | tail -1)
+            echo "number=$((10#$latest))" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check article and linked assets
+        run: python scripts/validate_publication.py "${{ steps.article.outputs.number }}"
