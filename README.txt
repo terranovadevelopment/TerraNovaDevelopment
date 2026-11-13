@@ -1,5 +1,10 @@
-Terra Nova Development Articles 085–087
+Terra Nova Development Articles #088–#090
 
-Extract into the ROOT of your local TerraNovaDevelopment GitHub repository. Preserve articles/, assets/, downloads/ folders. Commit and push in GitHub Desktop.
+The latest index.html has ALREADY been updated directly on GitHub (commit 0147a9c). Do not overwrite it with an older copy.
 
-This archive deliberately does NOT include index.html, to avoid overwriting the live homepage. The homepage must be indexed separately after the three article files and illustrations are pushed.
+1. In GitHub Desktop, Fetch origin and Pull origin first to obtain the updated homepage.
+2. Extract this ZIP into the root of the TerraNovaDevelopment repository, preserving the articles/, assets/, and downloads/ folders.
+3. Commit and Push origin once.
+4. After Render deploys, refresh with Ctrl+F5.
+
+This ZIP intentionally contains the nine new content files and README, not index.html, because the homepage has already been committed to GitHub.
