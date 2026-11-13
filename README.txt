@@ -1,1 +1,3 @@
-Terra Nova Development Articles 064–066. Extract into the root of your local TerraNovaDevelopment GitHub repository, preserving folders. This package intentionally does not contain index.html. Commit and push in GitHub Desktop, then tell ChatGPT "Articles 64–66 pushed" to update the homepage and revision history.
+Article #070 — Terra Nova University
+Extract into the TerraNovaDevelopment repository root, preserving folders. Commit and push in GitHub Desktop. Then tell ChatGPT "Article 070 pushed" so it can update homepage panels and revision history.
+No index.html is included.
