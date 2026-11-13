@@ -1,3 +1,1 @@
-Article #070 — Terra Nova University
-Extract into the TerraNovaDevelopment repository root, preserving folders. Commit and push in GitHub Desktop. Then tell ChatGPT "Article 070 pushed" so it can update homepage panels and revision history.
-No index.html is included.
+Extract the ZIP into the root of your local TerraNovaDevelopment repository. Commit and Push origin with GitHub Desktop. The ZIP deliberately does not contain index.html; the homepage will be updated separately after the three articles are pushed.
