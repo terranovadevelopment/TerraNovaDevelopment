@@ -1,5 +1,8 @@
-Terra Nova Development Articles #079–#081
+Terra Nova Development articles #082–#084
 
-Extract this ZIP into the local TerraNovaDevelopment repository root, commit and push all files via GitHub Desktop.
+1. In GitHub Desktop: Fetch origin, then Pull origin to obtain the latest index.html (updated directly on GitHub).
+2. Extract this ZIP into the repository root. Preserve folder structure.
+3. Commit and Push origin.
+4. Verify all three article cards on the live website after Render deploys; Ctrl+F5 if necessary.
 
-IMPORTANT: index.html is deliberately not included to avoid overwriting newer homepage changes. After pushing, tell ChatGPT 'Pushed' to add the three homepage panels and revision history directly to GitHub. Do not assume the homepage updates automatically.
+index.html is deliberately excluded because it is being updated directly on GitHub to avoid overwriting newer site changes.
