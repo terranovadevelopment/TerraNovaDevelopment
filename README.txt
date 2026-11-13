@@ -1,1 +1,1 @@
-Articles #075–#078. Extract into the ROOT of the TerraNovaDevelopment GitHub repository, preserving articles/, assets/, and downloads/ folders. Commit and push in GitHub Desktop. This archive does NOT contain index.html; the homepage cards must be added separately after upload. Article #076 HTML was generated from its DOCX.
+Article #067. Extract into TerraNovaDevelopment repository root, commit and push. index.html is not included. The homepage card should be inserted between #066 and #068.
