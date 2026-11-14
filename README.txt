@@ -1,11 +1,9 @@
-TERRA NOVA DEVELOPMENT — ARTICLES 112–114
+TERRA NOVA DEVELOPMENT — ARTICLES #115–#117
 
-This ZIP includes HTML articles, original images, 1200x630 social preview cards, and illustrated Word documents.
+Included: three fully illustrated HTML articles, three DOCX articles, the supplied original pictures, and dedicated 1200x630 JPEG social cards.
 
-The GitHub homepage index.html will be updated directly (both scrolling list and thumbnail panels).
+GitHub index.html has already been updated directly with all three cards and scrollable index entries.
 
-Copy the articles/, assets/, and documents/ folders to the root of your TerraNovaDevelopment GitHub repository and commit/push.
+For local copy: Extract into the TerraNovaDevelopment repository ROOT (merge articles/, assets/, documents/), then commit and push with GitHub Desktop. If your local index.html is older than GitHub, first pull the latest version. update_existing_index.py is an optional fallback for an old local index; it is not needed when you pull from GitHub.
 
-If your local index.html lacks these entries, run update_existing_index.py after extraction.
-
-The web articles use their original illustrations; Facebook, LinkedIn, and X use separate wide 1200x630 branded previews.
+The website is hosted at https://terranovadevelopment.onrender.com/ and will publish after you push the new assets and article pages and Render deploys.

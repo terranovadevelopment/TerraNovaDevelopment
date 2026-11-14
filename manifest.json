@@ -1,26 +1,10 @@
-[
-  {
-    "article": 112,
-    "title": "The Jubilee Manifesto",
-    "docx": "Terra_Nova_Article_112_The_Jubilee_Manifesto.docx",
-    "image": "article-112-original.png",
-    "social": "article-112-social.jpg",
-    "html": "article-112.html"
-  },
-  {
-    "article": 113,
-    "title": "How Humanity Can Outgrow the Broken Systems We See Everywhere",
-    "docx": "Terra_Nova_Article_113_How_Humanity_Can_Outgrow_Broken_Systems.docx",
-    "image": "article-113-original.png",
-    "social": "article-113-social.jpg",
-    "html": "article-113.html"
-  },
-  {
-    "article": 114,
-    "title": "A Financial and Moral Reset: How Government Could Be Funded Without Confiscation",
-    "docx": "Terra_Nova_Article_114_Financial_and_Moral_Reset.docx",
-    "image": "article-114-original.png",
-    "social": "article-114-social.jpg",
-    "html": "article-114.html"
-  }
-]
+{
+  "articles": [
+    115,
+    116,
+    117
+  ],
+  "image_format": "PNG original and JPEG 1200x630 social card",
+  "index_committed_in_github": true,
+  "expected_items": 15
+}
