@@ -1,5 +1,5 @@
-Terra Nova Development website articles 130–132.
+Terra Nova Development Articles #133–#135.
 
-Copy articles/, assets/, and documents/ into your existing repository root, preserving folders.
-The homepage index.html was updated directly in GitHub, so this ZIP intentionally does not replace it.
-Commit and push these files in GitHub Desktop to publish all article links and images.
+Extract articles/, assets/, and documents/ into your local Terra Nova Development repository root, preserving folders.
+The homepage index.html was updated directly on GitHub and is intentionally not included in this ZIP.
+Commit and push new files with GitHub Desktop to publish.
