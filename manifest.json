@@ -1,10 +1,14 @@
 {
   "articles": [
-    115,
-    116,
-    117
+    118,
+    119,
+    120
   ],
-  "image_format": "PNG original and JPEG 1200x630 social card",
-  "index_committed_in_github": true,
-  "expected_items": 15
+  "docx_images_embedded": true,
+  "social_images_size": [
+    1200,
+    630
+  ],
+  "github_index_updated_separately": true,
+  "github_commit": "2df2c3f4e20a5d92f488894fa31d9de41c34e009"
 }
