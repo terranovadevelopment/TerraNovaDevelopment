@@ -1,21 +1,26 @@
+#!/usr/bin/env python3
+"""Apply articles 100-102 to an EXISTING Terra Nova Development website root."""
 from pathlib import Path
-from bs4 import BeautifulSoup
-CARD_HTML = {94: '<a class="article-card" href="articles/article-094.html"><img alt="Article #094 illustration" decoding="async" loading="lazy" src="assets/article-094-thumbnail.png"/><div class="card-body"><span class="eyebrow">Article #094 · November 13, 2026</span><h3>The Full Case for Medicare for All: A Structural, Economic, and Moral Transformation</h3><p>The structural, economic, and moral case for universal healthcare.</p><span class="read">Read full article →</span></div></a>', 95: '<a class="article-card" href="articles/article-095.html"><img alt="Article #095 illustration" decoding="async" loading="lazy" src="assets/article-095-thumbnail.png"/><div class="card-body"><span class="eyebrow">Article #095 · November 13, 2026</span><h3>Medicare for All — The Hidden Consensus</h3><p>Why broader understanding of Medicare for All could change public opinion.</p><span class="read">Read full article →</span></div></a>', 96: '<a class="article-card" href="articles/article-096.html"><img alt="Article #096 illustration" decoding="async" loading="lazy" src="assets/article-096-thumbnail.png"/><div class="card-body"><span class="eyebrow">Article #096 · November 13, 2026</span><h3>The Great Contrast: Medicare for All Compared to Our Current System</h3><p>Comparing the complexity of American healthcare with a proposed single-payer system.</p><span class="read">Read full article →</span></div></a>'}
+from shutil import copy2
 root=Path(__file__).resolve().parent
-p=root/'index.html'
-if not p.exists():
- raise SystemExit('Place this update package into the root of the TerraNovaDevelopment website repository first.')
-soup=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
-cards=soup.select_one('#articles .cards')
-if cards is None: raise SystemExit('Could not find article cards section; index not modified.')
-for n in (94,95,96):
- if cards.select_one(f'a[href="articles/article-{n:03d}.html"]'): continue
- snippet=BeautifulSoup(CARD_HTML[n], 'html.parser')
- cards.append(snippet)
-rev=soup.select_one('#revisions')
-if rev and not rev.find(string=lambda s:s and 'Articles #094–#096' in s):
- pnew=soup.new_tag('p')
- pnew.append(BeautifulSoup('<strong>November 13, 2026:</strong> Added Articles #094–#096 on Medicare for All: The Full Case, The Hidden Consensus, and The Great Contrast.', 'html.parser'))
- h=rev.find('h2');h.insert_after(pnew)
-p.write_text(str(soup),encoding='utf-8')
-print('Updated index.html with Articles #094–#096')
+idx=root/'index.html'
+if not idx.exists():
+    raise SystemExit('index.html not found. Place/extract this package into the existing website root, then run this script.')
+s=idx.read_text(encoding='utf8')
+marker='</div></section><section class="secondary" id="about">'
+revision='<section id="revisions"><h2>Revision History</h2>'
+if marker not in s or revision not in s:
+    raise SystemExit('Expected article/revision markers are missing. Existing index.html left unchanged.')
+original=s
+for n in ('100','101','102'):
+    if f'href="articles/article-{n}.html"' not in s:
+        panel=(root/f'article-{n}-index-panel.html').read_text(encoding='utf8')
+        s=s.replace(marker,panel+marker,1)
+rev='Published Articles #100–#102'
+if rev not in s:
+    s=s.replace(revision,revision+'<p><strong>November 2026:</strong> Published Articles #100–#102: The True Cost of the Current U.S. Healthcare System; The Benefits of Medicare for All; and Give &amp; Take Community Centers: A Pathway to Economic Freedom for Every American, with original illustrations and downloadable Word documents.</p>',1)
+if s!=original:
+    backup=idx.with_name('index.backup-before-100-102.html')
+    if not backup.exists(): copy2(idx,backup)
+    idx.write_text(s,encoding='utf8')
+print('Article panels #100–#102 verified in index.html.')
