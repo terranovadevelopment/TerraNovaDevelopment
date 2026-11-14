@@ -1,22 +1,17 @@
-Terra Nova Development — Articles #100, #101, #102 Website Update
+Terra Nova Development - Articles 103, 104, 105 - website update
 
-This is a SAFE WEBSITE PATCH, not a replacement for your entire website.
+Includes:
+  articles/article-103.html through article-105.html
+  assets/article-103-original.png through article-105-original.png
+  assets/article-103-social.jpg through article-105-social.jpg (1200 x 630)
+  documents/three complete illustrated Word files
+  index-panels-103-105.html
+  update_index.py and apply_update.bat
 
-Contents:
- - articles/article-100.html, article-101.html, article-102.html
- - assets/article-100-original.png, article-101-original.png, article-102-original.png
- - documents/*.docx: three illustrated Word files
- - article-100-index-panel.html, article-101-index-panel.html, article-102-index-panel.html
- - update_index.py: inserts clickable homepage panels and revision history into your existing index.html
+IMPORTANT: Preserve all your existing website files.
+Article files, full-size images, social images, and Word documents are ready to copy to your repository.
+The existing index.html must be updated as well. This release includes a safe, repeatable index updater.
+For automatic direct publication, the GitHub repository index is updated separately by ChatGPT.
 
-IMPORTANT: There is intentionally NO replacement index.html in the ZIP because your live website already has Articles #001-099. Overwriting it with an old copy would be destructive.
-
-HOW TO USE:
-1. On your computer, open the local folder containing the existing Terra Nova website index.html.
-2. Extract the ZIP INTO that folder, preserving articles/, assets/, and documents/ subfolders.
-3. Run: python update_index.py (or double-click apply_update.bat on Windows).
-4. Confirm article #100, #101 and #102 appear in index.html, then commit/push changed files through GitHub Desktop.
-5. Render will redeploy from the GitHub repository.
-
-No images are hotlinked. All three HTML pages use bundled local image files, as do the homepage cards. Every DOCX embeds its image.
-If copying manually, NEVER replace index.html with a new blank index or delete older assets and pages.
+The social images have proper Open Graph and Twitter meta tags with absolute Render URLs.
+To refresh a Facebook preview after deployment, use the Facebook Sharing Debugger and Scrape Again.

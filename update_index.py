@@ -1,26 +1,24 @@
 #!/usr/bin/env python3
-"""Apply articles 100-102 to an EXISTING Terra Nova Development website root."""
+"""Idempotently update the existing Terra Nova index.html, preserving all original content."""
 from pathlib import Path
-from shutil import copy2
+import re
 root=Path(__file__).resolve().parent
-idx=root/'index.html'
-if not idx.exists():
-    raise SystemExit('index.html not found. Place/extract this package into the existing website root, then run this script.')
-s=idx.read_text(encoding='utf8')
+index=root/'index.html'
+if not index.exists():
+    raise SystemExit('Missing existing website index.html. Copy update package into the website root and rerun.')
+s=index.read_text(encoding='utf-8')
+parts=(root/'index-panels-103-105.html').read_text(encoding='utf-8')
 marker='</div></section><section class="secondary" id="about">'
+if marker not in s:raise SystemExit('Cannot identify articles section. No files modified.')
+if all(f'href="articles/article-{n}.html"' in s for n in ('103','104','105')):
+    print('Cards already indexed.')
+else:
+    # Build from individual cards and add only missing ones.
+    cards=re.findall(r'(<a class="article-card" href="articles/article-(\d{3})\.html">.*?</a>)',parts,re.S)
+    new=''.join(card for card,n in cards if f'href="articles/article-{n}.html"' not in s)
+    s=s.replace(marker,new+marker)
 revision='<section id="revisions"><h2>Revision History</h2>'
-if marker not in s or revision not in s:
-    raise SystemExit('Expected article/revision markers are missing. Existing index.html left unchanged.')
-original=s
-for n in ('100','101','102'):
-    if f'href="articles/article-{n}.html"' not in s:
-        panel=(root/f'article-{n}-index-panel.html').read_text(encoding='utf8')
-        s=s.replace(marker,panel+marker,1)
-rev='Published Articles #100–#102'
-if rev not in s:
-    s=s.replace(revision,revision+'<p><strong>November 2026:</strong> Published Articles #100–#102: The True Cost of the Current U.S. Healthcare System; The Benefits of Medicare for All; and Give &amp; Take Community Centers: A Pathway to Economic Freedom for Every American, with original illustrations and downloadable Word documents.</p>',1)
-if s!=original:
-    backup=idx.with_name('index.backup-before-100-102.html')
-    if not backup.exists(): copy2(idx,backup)
-    idx.write_text(s,encoding='utf8')
-print('Article panels #100–#102 verified in index.html.')
+notice='<p><strong>November 14, 2026:</strong> Added Articles #103–#105 with their illustrations, Word downloads, and Facebook, LinkedIn, and X sharing previews.</p>'
+if revision in s and notice not in s:s=s.replace(revision,revision+notice)
+index.write_text(s,encoding='utf-8')
+print('Updated', index)
