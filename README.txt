@@ -1,16 +1,11 @@
-TERRA NOVA DEVELOPMENT — ARTICLES 109–111 WEBSITE PACKAGE
+TERRA NOVA DEVELOPMENT — ARTICLES 112–114
 
-Contents:
-- articles/article-109.html through article-111.html
-- assets/article-109-original.png through article-111-original.png
-- assets/article-109-social.jpg through article-111-social.jpg (1200x630)
-- documents/*.docx — three illustrated Word documents
-- update_existing_index.py — idempotent updater for a local copy of the existing website
+This ZIP includes HTML articles, original images, 1200x630 social preview cards, and illustrated Word documents.
 
-The GitHub repository index.html has ALSO been updated directly to include all 111 scrollable index entries and all three homepage panels. Do not replace your current index.html with an older copy.
+The GitHub homepage index.html will be updated directly (both scrolling list and thumbnail panels).
 
-Extract files into your existing TerraNovaDevelopment repository root, preserving the articles/assets/documents directories. Commit and push in GitHub Desktop. The direct index update is already committed on GitHub.
+Copy the articles/, assets/, and documents/ folders to the root of your TerraNovaDevelopment GitHub repository and commit/push.
 
-Run python update_existing_index.py only if your local index.html does not yet include the three entries. This updater preserves all older content.
+If your local index.html lacks these entries, run update_existing_index.py after extraction.
 
-Sharing metadata is included separately in every HTML page: Open Graph and Twitter summary_large_image cards reference the corresponding 1200x630 social card via HTTPS on Render.
+The web articles use their original illustrations; Facebook, LinkedIn, and X use separate wide 1200x630 branded previews.
