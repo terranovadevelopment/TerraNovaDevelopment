@@ -1,17 +1,14 @@
-Terra Nova Development - Articles 103, 104, 105 - website update
+TERRA NOVA DEVELOPMENT: THREE-ARTICLE WEBSITE UPDATE 106-108
 
-Includes:
-  articles/article-103.html through article-105.html
-  assets/article-103-original.png through article-105-original.png
-  assets/article-103-social.jpg through article-105-social.jpg (1200 x 630)
-  documents/three complete illustrated Word files
-  index-panels-103-105.html
-  update_index.py and apply_update.bat
+Contains articles/, assets/, and documents/ for articles 106-108, including share-card images (1200 x 630).
+The existing site and its index.html must be retained.
 
-IMPORTANT: Preserve all your existing website files.
-Article files, full-size images, social images, and Word documents are ready to copy to your repository.
-The existing index.html must be updated as well. This release includes a safe, repeatable index updater.
-For automatic direct publication, the GitHub repository index is updated separately by ChatGPT.
+If installing via GitHub, upload/merge these directories and commit. The index was also updated directly in GitHub.
+If installing only on a local copy, copy the directories into the site root, and run: python update_index_local.py
 
-The social images have proper Open Graph and Twitter meta tags with absolute Render URLs.
-To refresh a Facebook preview after deployment, use the Facebook Sharing Debugger and Scrape Again.
+There are also Word backups in the separate DOCX backup ZIP.
+
+Article URLs:
+https://terranovadevelopment.onrender.com/articles/article-106.html
+https://terranovadevelopment.onrender.com/articles/article-107.html
+https://terranovadevelopment.onrender.com/articles/article-108.html
