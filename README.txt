@@ -1,9 +1,7 @@
-TERRA NOVA DEVELOPMENT — ARTICLES 148–150
+ARTICLES 151–153 SUPPLEMENTAL UPDATE
 
-This package contains three complete article pages, your original images, and Word downloads.
+The included index.html shows only the three new articles; it is NOT a replacement for your existing full website index.
+To update your real website without losing previous articles, copy articles/, assets/, docs/ into the existing site and run:
+python update_index.py /path/to/existing/site/index.html
 
-UPLOAD: Merge articles/, assets/, and downloads/ into the existing TerraNovaDevelopment repository root. Do not replace or delete any existing folders or files.
-
-The main GitHub index.html was updated separately in the connected repository to 150 articles. The index.html was updated directly on GitHub; it is not duplicated in this ZIP.
-
-After uploading the ZIP contents to GitHub, wait for Pages deployment and verify each article page and its image. Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
+Article 153 uses only the available excerpt; please supply the complete original for a full version.
